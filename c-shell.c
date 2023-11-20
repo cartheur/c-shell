@@ -47,7 +47,7 @@ void init(){
 					kill(GBSH_PID, SIGTTIN);             
 	              
 	              
-	        // Set the signal handlers for SIGCHILD and SIGINT
+	        // Set the signal handlers for SIGCHILD and SIGINT (NOTE: ignore the errors here, it is just a VsCode thang)
 			act_child.sa_handler = signalHandler_child;
 			act_int.sa_handler = signalHandler_int;			
 			
@@ -93,7 +93,7 @@ void welcomeScreen(){
         printf("\n\t============================================\n");
         printf("\t                C Shell\n");
         printf("\t--------------------------------------------\n");
-        printf("\t              by cartheur:\n");
+        printf("\t           by cartheur - 2023\n");
         printf("\t============================================\n");
         printf("\n\n");
 }
